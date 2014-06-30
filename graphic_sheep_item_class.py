@@ -4,7 +4,7 @@ from sheep_class import *
 
 import field_resources
 
-class CowGraphicsPixmapItem(AnimalGraphicsPixmapItem):
+class SheepGraphicsPixmapItem(AnimalGraphicsPixmapItem):
     """This class provides a graphical representation of a sheep"""
 
     def __init__(self):

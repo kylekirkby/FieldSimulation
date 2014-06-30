@@ -20,3 +20,13 @@ class AnimalGraphicsPixmapItem(FieldItemGraphicsPixmapItem):
             self.setPixmap(QPixmap(self.available_graphics[3])).scaledToWidth(25,1)
         elif self.animal._status == "Old":
             self.setPixmap(QPixmap(self.available_graphics[4])).scaledToWidth(25,1)
+
+    def _remove_animal(self):
+        self.scene().remove_animal(self)
+
+    def contextMenuEvent(self,event):
+        menu = QMenu("Animal")
+        remove = menu.addAction("Remove Animal")
+
+        remove.triggered.connect(self._remove_animal)
+        menu.exec_(event.screenPos())

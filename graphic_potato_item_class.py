@@ -3,7 +3,7 @@ from potato_class import *
 
 import field_resources
 
-class WheatGraphicsPixmapItem(CropGraphicsPixmapItem):
+class PotatoGraphicsPixmapItem(CropGraphicsPixmapItem):
     """This class provides a graphical representation of a potato crop """
     def __init__(self):
         self.available_graphics = [":/potato_seed.png", ":/potato_seedling.png",
